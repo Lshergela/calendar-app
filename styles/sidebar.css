@@ -1,0 +1,38 @@
+.sidebar {
+  border-right: 1px solid var(--color-gray-300);
+  width: 17rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.sidebar__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.logout {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  right: 0;
+  padding: 0 1rem;
+}
+
+.logout .name {
+  font-size: 0.8rem;
+}
+
+.logout .logoutButton {
+}
+
+.logout .logoutButton:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,36 @@
+body,
+html {
+  height: 100%;
+}
+
+.title {
+  margin-bottom: 3.5rem;
+}
+
+.tabcontainer {
+  margin-bottom: 2rem;
+}
+
+.tabcontainer .tab {
+  border-bottom: 1px solid gray;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tabcontainer .tab .tablinks {
+  width: 12rem;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
