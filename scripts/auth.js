@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     try {
       const response = await axios.post(
-        'http://localhost:3000/api/auth/login',
+        'https://dentini-calendar-3ac858824eb1.herokuapp.com/api/auth/login',
         formData
       );
 
@@ -84,7 +84,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const formData = Object.fromEntries(new FormData(e.target).entries());
 
     try {
-      await axios.post('http://localhost:3000/api/auth/register', formData);
+      await axios.post(
+        'https://dentini-calendar-3ac858824eb1.herokuapp.com/api/auth/register',
+        formData
+      );
 
       changeTab('signIn');
     } catch (error) {

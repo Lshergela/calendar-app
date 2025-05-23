@@ -18,7 +18,7 @@ export const createEvent = async (event) => {
 
   try {
     const response = await axios.post(
-      'http://localhost:3000/api/events/',
+      'https://dentini-calendar-3ac858824eb1.herokuapp.com/api/events/',
       body,
       config
     );
@@ -43,7 +43,7 @@ export const getEvents = async () => {
 
   try {
     const response = await axios.get(
-      'http://localhost:3000/api/events/',
+      'https://dentini-calendar-3ac858824eb1.herokuapp.com/api/events/',
       config
     );
 
@@ -64,7 +64,10 @@ export const deleteEvent = async (eventId) => {
   };
 
   try {
-    await axios.delete(`http://localhost:3000/api/events/${eventId}/`, config);
+    await axios.delete(
+      `https://dentini-calendar-3ac858824eb1.herokuapp.com/api/events/${eventId}/`,
+      config
+    );
   } catch (error) {
     console.error('Error:', error);
   }
@@ -90,7 +93,7 @@ export const updateEvent = async (event) => {
 
   try {
     const response = await axios.patch(
-      `http://localhost:3000/api/events/${event.id}`,
+      `https://dentini-calendar-3ac858824eb1.herokuapp.com/api/events/${event.id}`,
       body,
       config
     );
