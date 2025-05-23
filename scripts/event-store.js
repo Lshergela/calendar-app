@@ -42,8 +42,6 @@ export function initEventStore() {
     document.addEventListener('event-edit', async (event) => {
       const eventBody = event.detail.event;
 
-      console.log(eventBody);
-
       const updatedEvent = await updateEvent(eventBody);
 
       const events = getEventsFromLocalStorage().map((event) => {

@@ -8,10 +8,18 @@ export const createEvent = async (event) => {
     },
   };
 
+  const body = {
+    title: event.title,
+    startTime: event.startTime,
+    endTime: event.endTime,
+    date: event.date,
+    color: event.color,
+  };
+
   try {
     const response = await axios.post(
       'http://localhost:3000/api/events/',
-      event,
+      body,
       config
     );
 
