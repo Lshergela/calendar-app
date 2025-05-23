@@ -45,7 +45,7 @@ export function initEventStore() {
       const updatedEvent = await updateEvent(eventBody);
 
       const events = getEventsFromLocalStorage().map((event) => {
-        return event.id === updatedEvent.id ? updatedEvent : event;
+        return event._id === updatedEvent._id ? updatedEvent : event;
       });
       saveEventsIntoLocalStorage(events);
 
